@@ -29,6 +29,7 @@ class Application:
         start = time.time()
 
         for game in range(1, self.args.train_eps + 1):
+            print(f"Training Episode: {game}/{self.args.train_eps}")
             state = self.env.get_state()
             dead = False
             action = self.agent.act(state, 0, dead)
